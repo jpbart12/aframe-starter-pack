@@ -5,11 +5,26 @@
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-assets>
+        <img src="Assets/Minecraft-moon.png" id="sky">
+        <a-asset-item id="chicken" src="Assets/Chicken/零件5ipt.obj"></a-asset-item>
+        <img id="color_chicken" src="Assets/Chicken/AdobeStock_513076021.png">
+        <a-asset-item id="sheep" src="Assets/Chicken/零件61ipt - 複製.obj"></a-asset-item>
+        <img id="color_sheep" src="Assets/diamond.jpg">
+
+
+      </a-assets>
+
+      <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
       <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
       <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane> -->
+
+      <a-obj-model src="#chicken" material="src:#color_chicken; side:double" scale=".5 .5 .5" position="0 0 -40" rotation="0 90 0"></a-obj-model>
+      <a-obj-model src="#sheep"  material="src:#color_sheep; side:double" scale=".5 .5 .5" position="20 0 30" rotation="0 -45 0"></a-obj-model>
+
+      <a-sky src="#sky" position="0 250 0" radius="300"></a-sky>
+
     </a-scene>
   </body>
 </html>
